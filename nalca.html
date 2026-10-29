@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Los nombres de Nalca</title>
+<style>
+  :root {
+    --bg: #fbf7f2;
+    --ink: #2b2420;
+    --muted: #7a6d64;
+    --line: #d9cbbf;
+    --center: #c8743a;
+    --center-ink: #ffffff;
+    --c1: #e3a857;
+    --c2: #7fb08a;
+    --c3: #8a9fd1;
+    --c4: #d98b9b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1e1a17;
+      --ink: #f1e9e2;
+      --muted: #b3a69c;
+      --line: #4a3f38;
+      --center: #d9884d;
+      --center-ink: #1e1a17;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1e1a17;
+    --ink: #f1e9e2;
+    --muted: #b3a69c;
+    --line: #4a3f38;
+    --center: #d9884d;
+    --center-ink: #1e1a17;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 32px 16px;
+  }
+  main { max-width: 640px; margin: 0 auto; text-align: center; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  p.sub { color: var(--muted); margin: 0 0 24px; }
+  svg { width: 100%; height: auto; display: block; }
+  .spoke { stroke: var(--line); stroke-width: 3; stroke-dasharray: 6 6; }
+  .name { font-size: 22px; font-weight: 700; fill: #2b2420; }
+  .center-name { font-size: 34px; font-weight: 800; fill: var(--center-ink); }
+  .center-tag { font-size: 14px; fill: var(--center-ink); opacity: .85; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🐶 Los nombres de Nalca</h1>
+  <p class="sub">Una perrita, muchos nombres</p>
+
+  <svg viewBox="0 0 500 500" role="img" aria-label="Diagrama: Nalca en el centro, conectada con sus apodos Bobita, Pops, La Vivita y Perra">
+    <!-- Spokes from center to each nickname -->
+    <line class="spoke" x1="250" y1="250" x2="250" y2="70"/>
+    <line class="spoke" x1="250" y1="250" x2="430" y2="250"/>
+    <line class="spoke" x1="250" y1="250" x2="250" y2="430"/>
+    <line class="spoke" x1="250" y1="250" x2="70"  y2="250"/>
+
+    <!-- Center: Nalca -->
+    <circle cx="250" cy="250" r="88" fill="var(--center)"/>
+    <text x="250" y="248" text-anchor="middle" class="center-name">Nalca</text>
+    <text x="250" y="274" text-anchor="middle" class="center-tag">nombre oficial 🐾</text>
+
+    <!-- Nicknames -->
+    <circle cx="250" cy="70"  r="58" fill="var(--c1)"/>
+    <text x="250" y="78"  text-anchor="middle" class="name">Bobita</text>
+
+    <circle cx="430" cy="250" r="58" fill="var(--c2)"/>
+    <text x="430" y="258" text-anchor="middle" class="name">Pops</text>
+
+    <circle cx="250" cy="430" r="58" fill="var(--c3)"/>
+    <text x="250" y="438" text-anchor="middle" class="name">La Vivita</text>
+
+    <circle cx="70"  cy="250" r="58" fill="var(--c4)"/>
+    <text x="70"  y="258" text-anchor="middle" class="name">Perra</text>
+  </svg>
+
+</main>
+</body>
+</html>
